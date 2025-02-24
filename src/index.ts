@@ -2,6 +2,8 @@
  * Slide Animation
  */
 
+let isAnimating = false;
+
 const PREV_CLASS: string = 'prev';
 const NEXT_CLASS: string = 'next';
 
@@ -17,6 +19,20 @@ const getRootVariable = (variableName: string): string => {
 	const variable = getComputedStyle(root).getPropertyValue(variableName);
 
 	return variable;
+};
+
+const disableButtons = (): void => {
+	prevButton?.classList.add('disabled');
+	nextButton?.classList.add('disabled');
+	prevButton?.setAttribute('disabled', 'true');
+	nextButton?.setAttribute('disabled', 'true');
+};
+
+const enableButtons = (): void => {
+	prevButton?.classList.remove('disabled');
+	nextButton?.classList.remove('disabled');
+	prevButton?.removeAttribute('disabled');
+	nextButton?.removeAttribute('disabled');
 };
 
 const clearSlidesBoxClasses = (): void => {
@@ -62,6 +78,12 @@ if (prevButton && nextButton) {
 		const id: string = button.getAttribute('id') ?? '';
 
 		button.addEventListener('click', () => {
+			if (isAnimating) return;
+
+			isAnimating = true;
+
+			disableButtons();
+
 			slidesBox?.classList.add(id);
 
 			const slideDuration =
@@ -69,7 +91,12 @@ if (prevButton && nextButton) {
 
 			setTimeout(() => {
 				updateSlideItems(id);
+
 				clearClasses();
+
+				enableButtons();
+
+				isAnimating = false;
 			}, slideDuration);
 		});
 	});

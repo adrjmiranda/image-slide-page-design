@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--==================== Title ====================-->
+		<title>Image Slide | Page Design</title>
+
+		<!--==================== Meta Description ====================-->
+		<meta
+			name="description"
+			content="This repository contains the layout of an **image slide page design**. The design is created using HTML, CSS, and JavaScript."
+		/>
+
+		<!--==================== Meta OG (Open Graph) ====================-->
+		<meta property="og:title" content="Image Slide | Page Design" />
+		<meta
+			property="og:description"
+			content="This repository contains the layout of an **image slide page design**. The design is created using HTML, CSS, and JavaScript."
+		/>
+
+		<!--==================== Meta Robots ====================-->
+		<meta name="robots" content="index, follow" />
+
+		<!--==================== Favicon ====================-->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+		<!--==================== Style ====================-->
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<!--==================== Remix Icon ====================-->
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!--==================== No Script (Warning) ====================-->
+		<noscript>
+			<p>This page requires JavaScript to function properly.</p>
+		</noscript>
+
+    <!--==================== CONTENT ====================-->
+		<div id="content">
+      <!--==================== SLIDES ====================-->
+      <div id="slides">
+        <div class="slide active">
+          <img src="assets/img/landscape-1.jpg" alt="..." />
+        </div>
+        
+        <div class="slide">
+          <img src="assets/img/landscape-2.jpg" alt="..." />
+        </div>
+        
+        <div class="slide">
+          <img src="assets/img/landscape-3.jpg" alt="..." />
+        </div>
+        
+        <div class="slide">
+          <img src="assets/img/landscape-4.jpg" alt="..." />
+        </div>
+        
+        <div class="slide">
+          <img src="assets/img/landscape-5.jpg" alt="..." />
+        </div>
+        
+        <div class="slide">
+          <img src="assets/img/landscape-6.jpg" alt="..." />
+        </div>
+      </div>
+      <!--================ Enf of SLIDES =================-->
+      
+      <!--==================== CURSORS ====================-->
+      <div class="cursors">
+        <button type="button">
+          <i class="ri-arrow-left-s-line" id="prev"></i>
+        </button>
+        
+        <button type="button">
+          <i class="ri-arrow-right-s-line" id="next"></i>
+        </button>
+      </div>
+      <!--================ Enf of CURSORS =================-->
+      
+      <!--==================== DOTS ====================-->
+      <ul id="dots">
+        <li class="dot active"></li>
+        <li class="dot"></li>
+        <li class="dot"></li>
+        <li class="dot"></li>
+        <li class="dot"></li>
+        <li class="dot"></li>
+      </div>
+      <!--================ Enf of DOTS =================-->
+    </div>
+    <!--================ Enf of CONTENT =================-->
+
+		<!--==================== Script ====================-->
+		<script src="assets/js/index.js" />
+	</body>
+</html>

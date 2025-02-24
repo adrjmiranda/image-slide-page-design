@@ -8,6 +8,9 @@
 
 	/* Padding */
 	--slide-p: 1.25rem;
+
+	/* Duration */
+	--slide-duration: 1.5s;
 }
 
 /***************** General *******************/
@@ -62,15 +65,15 @@ li {
 	height: var(--slide-h);
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -100vw;
 }
 
 #slides.prev {
-	animation: 1.5s ease-in-out 0s 1 normal forwards slide__left;
+	animation: var(--slide-duration) ease-in-out 0s 1 normal forwards slide__left;
 }
 
 #slides.next {
-	animation: 1.5s ease-in-out 0s 1 normal forwards slide__right;
+	animation: var(--slide-duration) ease-in-out 0s 1 normal forwards slide__right;
 }
 
 .slide {
@@ -86,6 +89,7 @@ li {
 	object-position: center;
 	border-radius: 0.5rem;
 	filter: grayscale(1);
+	transition: 0.3s ease-in-out;
 }
 
 .slide.active img {
@@ -94,21 +98,21 @@ li {
 
 @keyframes slide__left {
 	0% {
-		left: 0;
+		left: -100vw;
 	}
 
 	100% {
-		left: -100vw;
+		left: -200vw;
 	}
 }
 
 @keyframes slide__right {
 	0% {
-		left: 0;
+		left: -100vw;
 	}
 
 	100% {
-		left: 100vw;
+		left: 0;
 	}
 }
 /************** End of SLIDES ***************/
@@ -143,31 +147,4 @@ li {
 	transform: scale(1.1);
 }
 /************** End of CURSORS ***************/
-
-/***************** DOTS *******************/
-#dots {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	width: 100%;
-	top: calc(var(--slide-h) - 80px);
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-#dots li {
-	background-color: var(--white-color-00);
-	height: 15px;
-	width: 15px;
-	border-radius: 50%;
-	transition: 0.25s ease-in-out;
-}
-
-#dots li.active {
-	width: 30px;
-	border-radius: 7.5px;
-	background-color: aqua;
-}
-/************** End of DOTS ***************/
 /************** End of CONTENT ***************/

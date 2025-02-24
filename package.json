@@ -1,27 +1,28 @@
 {
-  "name": "image-slide-page-design",
-  "version": "1.0.0",
-  "description": "This repository contains the layout of an **image slide page design**. The design is created using HTML, CSS, and JavaScript.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adrjmiranda/image-slide-page-design.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/adrjmiranda/image-slide-page-design/issues"
-  },
-  "homepage": "https://github.com/adrjmiranda/image-slide-page-design#readme",
-  "devDependencies": {
-    "ts-loader": "^9.5.2",
-    "typescript": "^5.7.3",
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1"
-  }
+	"name": "image-slide-page-design",
+	"version": "1.0.0",
+	"description": "This repository contains the layout of an **image slide page design**. The design is created using HTML, CSS, and JavaScript.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "npx webpack"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/adrjmiranda/image-slide-page-design.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/adrjmiranda/image-slide-page-design/issues"
+	},
+	"homepage": "https://github.com/adrjmiranda/image-slide-page-design#readme",
+	"devDependencies": {
+		"ts-loader": "^9.5.2",
+		"typescript": "^5.7.3",
+		"webpack": "^5.98.0",
+		"webpack-cli": "^6.0.1"
+	}
 }
